@@ -1,11 +1,11 @@
 # ARK Server Docker
 
 This is a docker container for running an ARK Dedicated Server. This is based on
-my (Project Zomboid Server Docker Container)[https://github.com/voidstar240/pzserver-docker].
+my [Project Zomboid Server Docker Container](https://github.com/voidstar240/pzserver-docker).
 This server also pauses when no players are connected! The included RCON client
 is written by \[ASY\]Zyrain and was sourced from the
-(Ryan Schulze's Archive)[http://www.asyserver.com/~cstrike/rcon.c], as the
-original source, [http://www.asyserver.com/] is no longer in available.
+[Ryan Schulze's Archive](http://www.asyserver.com/~cstrike/rcon.c), as the
+original source, <http://www.asyserver.com/> is no longer in available.
 
 Note: I have not tested this on Windows YMMV... but it probably won't work.
 
