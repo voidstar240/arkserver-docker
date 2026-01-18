@@ -92,6 +92,14 @@ wait_players_connected()
 
 wait_server_up()
 {
+    sleep 2
+    if ! grep -q '^RCONEnabled=True$' "$SAVED_DIR/Config/LinuxServer/GameUserSettings.ini"; then
+        echo "[$(date -Iseconds)]: ERROR: RCON disabled, Enabling RCON."
+        sed -i '/^RCONPort=/a RCONEnabled=True' "$SAVED_DIR/Config/LinuxServer/GameUserSettings.ini"
+        echo "[$(date -Iseconds)]: Restarting."
+        kill -TERM 1
+        sleep 60
+    fi
     rcon_cmd='rcon -P'"${ADMIN_PASSWORD}"' -a127.0.0.1 -p27020'
     while :
     do
